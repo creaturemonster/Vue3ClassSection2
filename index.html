@@ -2,9 +2,9 @@
 <html lang="en-US">
   <head>
     <title>Vue Basics</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.scss">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <scipt src="app.js"/>
+    <scipt src="index.js"/>
   </head>
   <body>
       <header>
@@ -12,8 +12,9 @@
       </header>
     <section id="user-goal">
       <h2>My Course Goal</h2>
-      <p>{{ courseGoal }}</p>
-      <p>Learn More <a v-bind:href="vueLink">About Vue</a></p>
+      <p v-html="outputGoal()"></p>
+      <p>{{ outputGoal() }}</p>
+      <p>Learn more <a v-bind:href="vueLink">About Vue</a></p>
     </section>
   </body>
 </html>
